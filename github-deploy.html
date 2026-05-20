@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>裴小童作品集 - GitHub Pages 部署指南</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: linear-gradient(135deg, #f5f0e8 0%, #e8e0d5 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .container {
+      background: white;
+      border-radius: 24px;
+      padding: 48px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 700px;
+      width: 100%;
+    }
+    h1 {
+      color: #3d3325;
+      font-size: 28px;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+    .subtitle {
+      color: #8b7355;
+      font-size: 16px;
+      margin-bottom: 32px;
+    }
+    .steps {
+      text-align: left;
+      margin: 24px 0;
+    }
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 20px;
+      padding: 16px;
+      background: #f9f7f4;
+      border-radius: 12px;
+    }
+    .step-number {
+      width: 32px;
+      height: 32px;
+      background: #3d3325;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    .step-content {
+      flex: 1;
+    }
+    .step-title {
+      font-weight: 600;
+      color: #3d3325;
+      margin-bottom: 4px;
+    }
+    .step-desc {
+      color: #8b7355;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .code {
+      background: #e8e0d5;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-family: monospace;
+      font-size: 13px;
+      word-break: break-all;
+      margin-top: 8px;
+      display: block;
+    }
+    .github-btn {
+      display: inline-block;
+      padding: 16px 32px;
+      background: #24292e;
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      margin: 24px 0;
+      transition: all 0.3s;
+    }
+    .github-btn:hover {
+      background: #404448;
+      transform: translateY(-2px);
+    }
+    .note {
+      color: #8b7355;
+      font-size: 13px;
+      line-height: 1.6;
+      padding: 16px;
+      background: #f5f0e8;
+      border-radius: 12px;
+      margin-top: 24px;
+    }
+    .url-preview {
+      background: #e8f4e8;
+      border: 2px dashed #4a9;
+      padding: 16px;
+      border-radius: 12px;
+      margin-top: 24px;
+    }
+    .url-preview h3 {
+      color: #2a7;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    .url-preview p {
+      color: #3d3325;
+      font-family: monospace;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>裴小童作品集</h1>
+    <p class="subtitle">GitHub Pages 部署指南</p>
+    
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <div class="step-title">创建 GitHub 仓库</div>
+          <div class="step-desc">
+            访问 GitHub，创建一个新仓库，命名为 design-portfolio
+            <a href="https://github.com/new" target="_blank" class="github-btn" style="margin: 8px 0; padding: 8px 16px; font-size: 14px;">创建仓库</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <div class="step-title">推送代码到 GitHub</div>
+          <div class="step-desc">
+            在项目文件夹中运行以下命令：
+            <span class="code">git remote add origin https://github.com/你的用户名/design-portfolio.git</span>
+            <span class="code">git branch -M main</span>
+            <span class="code">git push -u origin main</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <div class="step-title">启用 GitHub Pages</div>
+          <div class="step-desc">
+            进入仓库 Settings → Pages → Source，选择 "GitHub Actions"
+          </div>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <div class="step-title">等待部署完成</div>
+          <div class="step-desc">
+            进入仓库 Actions 标签页，等待部署完成（约 2-3 分钟）
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="url-preview">
+      <h3>✅ 部署完成后，你的网址将是：</h3>
+      <p>https://你的用户名.github.io/design-portfolio/</p>
+    </div>
+    
+    <div class="note">
+      💡 <strong>提示：</strong>部署配置已自动完成，推送代码后会自动触发部署<br><br>
+      部署完成后，将获得的网址告诉我，我可以帮你生成二维码！
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>裴小童作品集 - 访问二维码</title>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: linear-gradient(135deg, #f5f0e8 0%, #e8e0d5 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .container {
+      background: white;
+      border-radius: 24px;
+      padding: 48px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 500px;
+      width: 100%;
+    }
+    h1 {
+      color: #3d3325;
+      font-size: 28px;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+    .subtitle {
+      color: #8b7355;
+      font-size: 16px;
+      margin-bottom: 32px;
+    }
+    .qr-container {
+      background: #f9f7f4;
+      padding: 24px;
+      border-radius: 16px;
+      margin-bottom: 24px;
+    }
+    #qrcode {
+      display: flex;
+      justify-content: center;
+    }
+    #qrcode canvas {
+      border-radius: 8px;
+    }
+    .url {
+      background: #f5f0e8;
+      padding: 16px 24px;
+      border-radius: 12px;
+      margin-bottom: 24px;
+      word-break: break-all;
+      font-family: monospace;
+      font-size: 14px;
+      color: #3d3325;
+    }
+    .note {
+      color: #8b7355;
+      font-size: 13px;
+      line-height: 1.6;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid #e8e0d5;
+    }
+    .section-title {
+      font-size: 14px;
+      color: #8b7355;
+      margin-bottom: 16px;
+      margin-top: 32px;
+      font-weight: 500;
+    }
+    .deploy-options {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .deploy-btn {
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .deploy-btn.vercel {
+      background: #000;
+      color: white;
+    }
+    .deploy-btn.vercel:hover {
+      background: #333;
+      transform: translateY(-2px);
+    }
+    .deploy-btn.github {
+      background: #24292e;
+      color: white;
+    }
+    .deploy-btn.github:hover {
+      background: #404448;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>裴小童作品集</h1>
+    <p class="subtitle">扫码访问网站</p>
+    
+    <div class="qr-container">
+      <div id="qrcode"></div>
+    </div>
+    
+    <div class="url">http://localhost:3000/</div>
+    
+    <p class="note">
+      ⚠️ 当前为本地地址，仅限本机访问<br>
+      如需公网访问，请使用下方部署平台
+    </p>
+    
+    <p class="section-title">永久部署到公网</p>
+    <div class="deploy-options">
+      <a href="https://vercel.com/new" target="_blank" class="deploy-btn vercel">
+        部署到 Vercel
+      </a>
+      <a href="https://github.com/new" target="_blank" class="deploy-btn github">
+        部署到 GitHub Pages
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // 生成本地地址二维码
+    QRCode.toCanvas(document.createElement('canvas'), 'http://localhost:3000/', {
+      width: 200,
+      margin: 2,
+      color: {
+        dark: '#3d3325',
+        light: '#ffffff'
+      }
+    }, function(error, canvas) {
+      if (error) {
+        console.error(error);
+        return;
+      }
+      document.getElementById('qrcode').appendChild(canvas);
+    });
+  </script>
+</body>
+</html>

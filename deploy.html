@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>裴小童作品集 - 部署指南</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: linear-gradient(135deg, #f5f0e8 0%, #e8e0d5 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .container {
+      background: white;
+      border-radius: 24px;
+      padding: 48px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+    }
+    h1 {
+      color: #3d3325;
+      font-size: 28px;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+    .subtitle {
+      color: #8b7355;
+      font-size: 16px;
+      margin-bottom: 32px;
+    }
+    .steps {
+      text-align: left;
+      margin: 24px 0;
+    }
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 20px;
+      padding: 16px;
+      background: #f9f7f4;
+      border-radius: 12px;
+    }
+    .step-number {
+      width: 32px;
+      height: 32px;
+      background: #3d3325;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    .step-content {
+      flex: 1;
+    }
+    .step-title {
+      font-weight: 600;
+      color: #3d3325;
+      margin-bottom: 4px;
+    }
+    .step-desc {
+      color: #8b7355;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .deploy-btn {
+      display: inline-block;
+      padding: 16px 32px;
+      background: #000;
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      margin: 24px 0;
+      transition: all 0.3s;
+    }
+    .deploy-btn:hover {
+      background: #333;
+      transform: translateY(-2px);
+    }
+    .note {
+      color: #8b7355;
+      font-size: 13px;
+      line-height: 1.6;
+      padding: 16px;
+      background: #f5f0e8;
+      border-radius: 12px;
+      margin-top: 24px;
+    }
+    .path {
+      background: #e8e0d5;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-family: monospace;
+      font-size: 13px;
+      word-break: break-all;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>裴小童作品集</h1>
+    <p class="subtitle">一键部署到公网</p>
+    
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <div class="step-title">打包项目文件</div>
+          <div class="step-desc">将项目文件夹打包成 ZIP 文件</div>
+          <div class="path">E:\裴小童\pxt\2.0（筑森版）\作品集\wangzhan\design-portfolio</div>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <div class="step-title">上传到 Vercel</div>
+          <div class="step-desc">点击下方按钮，拖拽 ZIP 文件即可部署</div>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <div class="step-title">获得网址</div>
+          <div class="step-desc">部署完成后会获得永久网址（如 xxx.vercel.app）</div>
+        </div>
+      </div>
+    </div>
+    
+    <a href="https://vercel.com/new" target="_blank" class="deploy-btn">
+      前往 Vercel 部署
+    </a>
+    
+    <div class="note">
+      💡 <strong>提示：</strong>如果不想打包，也可以直接将项目文件夹拖拽到 Vercel 网站上传<br><br>
+      部署完成后，将获得的网址告诉我，我可以帮你生成二维码！
+    </div>
+  </div>
+</body>
+</html>
