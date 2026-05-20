@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", ui-serif, Georgia, serif;
+  --font-hand: "Noto Sans SC", "PingFang SC", cursive;
+  
+  --color-bg-cream: #faf9f5;
+  --color-text-brown: #362e29;
+  --color-accent-orange: #e56b40;
+  --color-accent-blue: #a3c2d1;
+  --color-accent-green: #bac282;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg-cream);
+  color: var(--color-text-brown);
+}

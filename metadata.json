@@ -1,0 +1,6 @@
+{
+  "name": "Design Portfolio",
+  "description": "Personal portfolio website for a spatial designer transitioning from landscape to commercial space design.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
