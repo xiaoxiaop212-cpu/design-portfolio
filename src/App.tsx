@@ -71,7 +71,7 @@ export const projects = [
     title: "苏澳大厦",
     category: "Commercial",
     description: "简洁、自然、具有未来感的花园办公空间。",
-    image: "/images/suao-1.png",
+    image: "./images/suao-1.png",
     tags: ["景观设计", "景观", "商业景观"],
     details: {
       location: "江苏常州",
@@ -85,10 +85,10 @@ export const projects = [
 
 项目整体立足于生态协同与创新街坊的融合发展，回应高定位、大格局、创未来的区域愿景，构建面向未来的城市创智空间。`,
     renderings: [
-      "/images/suao-r1.png",
-      "/images/suao-r2.png",
-      "/images/suao-r3.png",
-      "/images/suao-r4.png"
+      "./images/suao-r1.png",
+      "./images/suao-r2.png",
+      "./images/suao-r3.png",
+      "./images/suao-r4.png"
     ]
   },
 
@@ -97,7 +97,7 @@ export const projects = [
     title: "悦来汇中心",
     category: "Commercial",
     description: "公园商业一体化多元模式。",
-    image: "/images/yuelai-main.png",
+    image: "./images/yuelai-main.png",
     tags: ["商业综合体", "多元空间", "景观"],
     details: {
       location: "河南平顶山",
@@ -109,10 +109,10 @@ export const projects = [
 
 竞品项目中广场硬质过多、可停留节点缺失、室内外联动不足等问题，强化了亲水体验、休息节点和街区式的空间串联。整体上，景观不是商业的附属，而是与商业功能并行的公共载体，旨在实现繁忙城市中的一片宁静与自然体验的融合。`,
     renderings: [
-      "/images/yuelai-r1.png",
-      "/images/yuelai-r2.png",
-      "/images/yuelai-r3.png",
-      "/images/yuelai-r4.png"
+      "./images/yuelai-r1.png",
+      "./images/yuelai-r2.png",
+      "./images/yuelai-r3.png",
+      "./images/yuelai-r4.png"
     ]
   },
   {
@@ -120,7 +120,7 @@ export const projects = [
     title: "吾悦学府三期",
     category: "Landscape",
     description: "一个充满诗意的雅士栖居之所。",
-    image: "/images/wuyue-main.png",
+    image: "./images/wuyue-main.png",
     tags: ["住宅景观", "生态", "总体规划"],
     details: {
       location: "山东东营",
@@ -132,10 +132,10 @@ export const projects = [
 
 整体依托五进院落式空间序列，在礼制与自然之间形成"一半烟火、一半清欢"的栖居格局，兼顾日常生活的便利性与精神层面的诗意体验。`,
     renderings: [
-      "/images/wuyue-r1.png",
-      "/images/wuyue-r2.png",
-      "/images/wuyue-r3.png",
-      "/images/wuyue-r4.png"
+      "./images/wuyue-r1.png",
+      "./images/wuyue-r2.png",
+      "./images/wuyue-r3.png",
+      "./images/wuyue-r4.png"
     ]
   },
   {
@@ -143,7 +143,7 @@ export const projects = [
     title: "天乐社区旧改",
     category: "Landscape",
     description: "老旧社区空间更新改造。",
-    image: "/images/tianle-main.jpg",
+    image: "./images/tianle-main.jpg",
     tags: ["城市", "硬质景观", "活动"],
     details: {
       location: "安徽合肥",
@@ -155,9 +155,9 @@ export const projects = [
 
 设计中特别关注老年居民的使用需求，设置了无障碍通道、休憩廊架以及康体健身区域。同时，通过社区文化墙和景观小品，讲述社区历史，增强居民归属感。`,
     renderings: [
-      "/images/tianle-r1.jpg",
-      "/images/tianle-r2.jpg",
-      "/images/tianle-r3.jpg"
+      "./images/tianle-r1.jpg",
+      "./images/tianle-r2.jpg",
+      "./images/tianle-r3.jpg"
     ]
   }
 ];
