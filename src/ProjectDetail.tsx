@@ -19,7 +19,7 @@ export default function ProjectDetail() {
     );
   }
 
-  const allImages = project.images || [project.image];
+  const allImages = [project.image, ...(project.renderings || [])];
 
   return (
     <div className="min-h-screen font-sans bg-bg-cream">
