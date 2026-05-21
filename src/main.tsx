@@ -5,9 +5,11 @@ import App from './App.tsx';
 import ProjectDetail from './ProjectDetail.tsx';
 import './index.css';
 
+const basename = import.meta.env.PROD ? '/design-portfolio/' : undefined;
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/project/:id" element={<ProjectDetail />} />
